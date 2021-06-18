@@ -16,70 +16,66 @@
   --color-white: #ffffff;
   --color-black: #000000;
   --color-header-decoration-line: #ececec;
+  --color-icon: #afb1b8;
+  --color-bg-icon-footer: rgba(255, 255, 255, 0.1);
 
-  /* Тень для Главной кнопки (статическая) и Вторичной кнопки (динамическая - по наведению/при фокусе) */
-  --color-filter-btn-box-shadow-light: rgba(0, 0, 0, 0.08);
-  --color-filter-btn-box-shadow-darker: rgba(0, 0, 0, 0.1);
-  --color-filter-btn-box-shadow-darkest: rgba(0, 0, 0, 0.12);
+  /* Тень Главной кнопки (статическая) и Вторичной кнопки (динамическая - по наведению/при фокусе) */
+  --box-shadow-filter-btn: 0 3px 1px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.08),
+    0 2px 2px rgba(0, 0, 0, 0.12);
 
-  --box-shadow-filter-btn: 0 3px 1px var(--color-filter-btn-box-shadow-darker),
-    0 1px 2px var(--color-filter-btn-box-shadow-light),
-    0 2px 2px var(--color-filter-btn-box-shadow-darkest);
+  /* Тень Карточки дизайнера (статическая) - material shadow v1 */
+  --box-shadow-designer-card: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.14),
+    0 2px 1px rgba(0, 0, 0, 0.2);
 
-  /* Тень для Карточки дизайнера (статическая) - material shadow v1 */
-  --color-designer-card-box-shadow-light: rgba(0, 0, 0, 0.12);
-  --color-designer-card-box-shadow-darker: rgba(0, 0, 0, 0.14);
-  --color-designer-card-box-shadow-darkest: rgba(0, 0, 0, 0.2);
-
-  --box-shadow-designer-card: 0 1px 3px var(--color-designer-card-box-shadow-light),
-    0 1px 1px var(--color-designer-card-box-shadow-darker),
-    0 2px 1px var(--color-designer-card-box-shadow-darkest);
-
-  --color-hero-btn-shadow: rgba(0, 0, 0, 0.15);
-  --box-shadow-hero-btn: 0 4px 4px var(--color-hero-btn-shadow); /* Тень Кнопки-героя (статическая) */
+  --box-shadow-hero-btn: 0 4px 4px rgba(0, 0, 0, 0.15); /* Тень Кнопки-героя (статическая) */
 
   --color-footer-contacts: rgba(255, 255, 255, 0.6);
   /* || ------------------ END "ПАЛИТРА" ------------------ */
 
   /* || ------------- START "ОТСТУПЫ СТУДИИ" -------------- */
   --max-width-container: 1200px; /* Макс. ширина контейнера */
-  --padding-container: 0 15px; /* Падинги - дают отступ от контейнера - сжимают контент внутрь страницы по горизонтали  */
+  --padding-container: 0 15px; /* Отдаляет текст от границы экрана */
   --min-width-activity-image: 370px;
-  --breakpoint-mr: 30px; /* (mr=margin) Часто используемое значение для высоты и отступов между элементами */
-  --flex-margins-top-and-left: var(--breakpoint-mr) 0 0 var(--breakpoint-mr);
+  --uni-margin: 30px; /* Универсальное значение высоты и отступов */
+  --flex-margins-top-and-left: var(--uni-margin) 0 0 var(--uni-margin);
 
-  /* Хедер */
   /* Хедер-Лого */
-  --padding-logo: 2.5px 0; /* Вертикальные Падинги для увеличения зоны клика по ссылке */
   --margin-right-logo-container: 93px; /* Правый отступ между Лого и навигацией */
 
-  /* Хедер-"Главная навигация" */
-  --margin-right-nav-menu-item: 50px; /* Правый отступ между ссылками Главной навигации */
+  /* Хедер-"Главная навигация", Хедер-Контакты, Герой */
+  /* Правый отступ между ссылками Главной навигации */
+  /* Правый отступ между ссылками Контактов */
+  /* Нижний отступ между заголовком h2 и секциями "Чем мы занимаемся" и "Наша команда" */
+  /* Нижний отступ между Фильтрами-кнопками и карточками Проектов */
+  --universal--margin-large: 50px;
 
-  /* Хедер-Контакты */
-  --margin-right-header-contact-list-item: 50px; /* Правый отступ между ссылками Контактов */
+  /* Футер-Адрес, Футер-Соц-ссылки */
+  /* Верхний отступ между адресом и Лого */
+  /* Левый отступ между контейнерами ссылок на соц. сети и адресом */
+  --universal--margin-small: 20px;
 
-  /* Герой */
+  /* "Наша команда"-"Карточки Дизайнеров", Особенности */
+  /* Нижний отступ между именем и ролью дизайнера */
+  /* Нижний отступ между Оглавлением h3 и параграфом */
+  --universal--margin-minimum: 10px;
 
-  /* Особенности */
-  --flex-features-card-qty: 4; /* Кол-во карточек Особенностей на одной линии. */
-  --margin-bottom-feature-heading: 10px; /* Нижний отступ между Оглавлением h3 и параграфом */
+  /* Постоянные клиенты */
+  --cards-per-line-big: 6;
 
-  /* "Чем мы занимаемся" */
-  --flex-activities-card-qty: 3; /* Кол-во карточек Активностей на одной линии. */
-  --margin-bottom-section-title: 50px; /* Нижний отступ между заголовком h2 и секциями "Чем мы занимаемся" и "Наша команда" */
+  /* Особенности, "Наша команда"-"Карточки Дизайнеров" */
+  /* Кол-во карточек Особенностей на одной линии. */
+  /* Кол-во карточек Дизайнеров на одной линии. */
+  --cards-per-line-medium: 4;
 
-  /* "Наша команда"-"Карточки Дизайнеров" */
-  --flex-designer-card-qty: 4; /* Кол-во карточек Дизайнеров на одной линии. */
-  --margin-bottom-designer-name: 10px; /* Нижний отступ между именем и ролью дизайнера */
+  /* "Чем мы занимаемся", Портфолио-"Карточки Проектов" */
+  /* Кол-во карточек Активностей на одной линии. */
+  /* Количество карточек Проектов на одной линии во флекс-сетке. */
+  --cards-per-line-small: 3;
 
-  /* Футер */
   /* Футер-Адрес */
-  --margin-top-footer-address: 20px; /* Верхний отступ между адресом и Лого */
   --margin-bottom-footer-address-list-item: 9px; /* Нижний отступ между ссылками в адресе */
 
   /* Футер-Соц-ссылки */
-  --padding-left-footer-social-container: 20px; /* Левый отступ между контейнерами ссылок на соц. сети и адресом */
   --margin-right-footer-social-list-item: 21px; /* Правый отступ между ссылками на соц. сети */
   /* || -------------- END "ОТСТУПЫ СТУДИИ" --------------- */
 
@@ -87,13 +83,12 @@
   /* Портфолио-Фильтры-кнопки */
   --margin-top-portfolio-filter: 15px; /* Верхний отступ между фильтрами-кнопками */
   --margin-left-portfolio-filter: 8px; /* Левый отступ между фильтрами-кнопками */
-  --margin-bottom-portfolio-filters: 50px; /* Нижний отступ между Фильтрами-кнопками и карточками Проектов */
-
-  /* Портфолио-"Карточки Проектов" */
-  --flex-portfolio-card-qty: 3; /* Количество карточек Проектов на одной линии во флекс-сетке. */
 
   /* Макс. ширина карточки Проектов */
-  --flex-basis-portfolio-card: calc(100% / var(--flex-portfolio-card-qty) - var(--breakpoint-mr));
+  --flex-basis-portfolio-card: calc(100% / var(--cards-per-line-small) - var(--uni-margin));
+
+  /* Постоянные клиенты */
+  --flex-basis-client-card: calc(100% / var(--cards-per-line-big) - var(--uni-margin));
   /* || ------------- END "ОТСТУПЫ ПОРТФОЛИО" ------------- */
 }
 /* ------------------------------------------------------ */
@@ -115,11 +110,11 @@ li,
 .links,
 .btn {
   padding: 0;
-  margin: 0;
   padding-inline-start: 0;
   padding-inline-end: 0;
   padding-block-start: 0;
   padding-block-end: 0;
+  margin: 0;
   margin-inline-start: 0;
   margin-inline-end: 0;
   margin-block-start: 0;
@@ -135,31 +130,38 @@ li,
 body {
   font-family: var(--font-family-sans-serif);
   color: var(--color-text-primary);
+  letter-spacing: 0.03em;
   background-color: var(--color-white);
 }
 
 .skip-to-content > .skip-link {
-  padding: 6px;
   position: absolute;
   top: -40px;
   left: 0;
+  z-index: 100;
+
+  padding: 6px;
+
   color: var(--color-white);
+  background-color: var(--color-bg-skip-to-content);
+
   border-right: 1px solid var(--color-white);
   border-bottom: 1px solid var(--color-white);
   border-bottom-right-radius: 8px;
-  background-color: var(--color-bg-skip-to-content);
+
   -webkit-transition: top 1s ease-out;
   -moz-transition: top 1s ease-out;
   -o-transition: top 1s ease-out;
   transition: top 1s ease-out;
-  z-index: 100;
 }
 
 .skip-to-content > .skip-link:focus {
   position: absolute;
-  left: 0;
   top: 0;
+  left: 0;
+
   outline-color: transparent;
+
   -webkit-transition: top 0.1s ease-in;
   -moz-transition: top 0.1s ease-in;
   -o-transition: top 0.1s ease-in;
@@ -167,8 +169,8 @@ body {
 }
 
 .container {
-  max-width: var(--max-width-container);
   min-width: var(--min-width-activity-image); /* Мин. ширина картинки активности */
+  max-width: var(--max-width-container);
   padding: var(--padding-container);
   margin: 0 auto;
 }
@@ -181,16 +183,14 @@ body {
 
 /* Чем мы занимаемся, Наша команда */
 .section-title {
-  line-height: 42px;
-  margin-bottom: var(--margin-bottom-section-title);
+  margin-bottom: var(--universal--margin-large);
 
-  font-size: 36px;
-  text-align: center;
-  letter-spacing: 0.03em;
   /* Наследует от body - font-family: Roboto; */
   /* Наследует от браузера - font-weight: 700; font-style: normal; */
-
+  font-size: 36px;
+  line-height: 1.17; /* 42px */
   color: var(--color-text-primary); /* Primary text color #212121 */
+  text-align: center;
 }
 
 .list {
@@ -206,41 +206,39 @@ body {
 }
 
 .links {
-  display: inline-block;
-  text-decoration: none;
+  /* display: inline-block; */
   color: inherit;
+  text-decoration: none;
 }
 
 /* Шаблон кнопки - "Все", "Веб-сайты", "Приложения", "Дизайн", "Маркетинг" */
 .btn {
-  padding: 6px 22px;
-  min-height: 38px;
-
   display: inline-block;
+  min-height: 38px;
+  padding: 6px 22px;
 
-  font-weight: 500;
   font-size: 16px;
-  line-height: 162%; /* identical to box height, or 162% */
+  font-weight: 500;
+  line-height: 1.62; /* 38px = box height */
+  letter-spacing: inherit;
 
-  letter-spacing: 0.03em;
+  cursor: pointer;
+
   border: none;
   border-radius: 4px;
-  cursor: pointer;
 }
 
 /* Главная кнопка: фон - акцент,  цвет - белый #ffffff. + тень статическая */
 .btn--primary {
-  background-color: var(--color-accent); /* Акцент #2196F3 */
   color: var(--color-white); /* Белый #FFFFFF */
-
-  /* shadow-middle */
-  box-shadow: var(--box-shadow-filter-btn);
+  background-color: var(--color-accent); /* Акцент #2196F3 */
+  box-shadow: var(--box-shadow-filter-btn); /* shadow-middle */
 }
 
 /* Вторичная кнопка: Фон - серый #f5f4fa,  цвет - темный #212121, + тень динамическая по ховеру */
 .btn--secondary {
-  background-color: var(--color-bg-section-grey);
   color: var(--color-text-primary);
+  background-color: var(--color-bg-section-grey);
 }
 /* ------------------------------------------------------ */
 /* || -------------- END "ОБЩИЕ НАСТРОЙКИ" -------------- */
@@ -262,13 +260,13 @@ page-header > header-container > header-nav > (logo + nav-menu) ^ +
 
 /* Декоративная линия под шапкой сайта */
 .page-header::after {
-  content: "";
   position: absolute;
+  top: 80px;
   min-width: 100%;
   max-height: 0;
-  top: 80px;
-  /* Line */
-  border-bottom: 1px solid var(--color-header-decoration-line);
+  content: "";
+
+  border-bottom: 1px solid var(--color-header-decoration-line); /* Line */
 }
 
 .header-container {
@@ -296,14 +294,11 @@ page-header > header-container > header-nav > (logo + nav-menu) ^ +
   flex-flow: row nowrap;
   align-items: center;
 
-  padding: var(--padding-logo);
-
   font-family: Raleway;
+  font-size: 26px;
   font-style: normal;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 100%; /* 31px identical to box height */
-  letter-spacing: 0.03em;
+  line-height: 1.2; /* 31px = box height */
 }
 
 .webstudio {
@@ -334,19 +329,19 @@ page-header > header-container > header-nav > (logo + nav-menu) ^ +
 /* .nav-menu-item { } */
 
 .nav-menu-item:not(:last-child) {
-  margin-right: var(--margin-right-nav-menu-item);
+  margin-right: var(--universal--margin-large);
 }
 
 /* Студия, Портфолио, Контакты, info@devstudio.com, +38 096 111 11 11 */
 .nav-link,
-.header-contacts {
+.header-contact {
   position: relative;
   padding-top: 7px;
   padding-bottom: 8px;
 
-  font-weight: 500;
   font-size: 14px;
-  line-height: 16px;
+  font-weight: 500;
+  line-height: 1.15; /* 16px */
   letter-spacing: 0.02em;
   white-space: nowrap;
 }
@@ -357,15 +352,17 @@ page-header > header-container > header-nav > (logo + nav-menu) ^ +
 }
 
 .nav-link[aria-current="page"]::after {
-  content: "";
   position: absolute;
   top: 52px;
   left: 0;
+  z-index: 21;
   min-width: 100%;
   min-height: 5px;
+
+  content: "";
+
   background-color: var(--color-accent);
   border-radius: 21px;
-  z-index: 21;
 }
 
 /* END "Главная навигация сайта" */
@@ -381,14 +378,21 @@ page-header > header-container > header-nav > (logo + nav-menu) ^ +
 
 .header-contacts-list {
   flex-flow: row wrap;
+  align-items: center;
 }
 
 .header-contact-list-item:not(:last-child) {
-  margin-right: var(--margin-right-header-contact-list-item);
+  margin-right: var(--universal--margin-large);
 }
 
-.header-contacts {
+.header-contact {
+  align-items: center;
   color: var(--color-text-secondary);
+}
+
+.header-contact-icon {
+  margin-right: 10px;
+  fill: currentColor;
 }
 
 /* END "Шапка сайта - Контакты" */
@@ -398,84 +402,71 @@ page-header > header-container > header-nav > (logo + nav-menu) ^ +
 */
 
 .sr-only {
-  pointer-events: none !important; /* Не выделяется мышкой. Контент видно, выделяется табом. Блок в потоке. */
-
   /* В классе "screen readers only" (.sr-only) Для Читалок удалить visibility: hidden; -> и задать элементу (скрытым заголовкам секций) в тег tabindex="0"
   Тогда контент не выделяется табом.  Контент видно, выделяется мышкой. Блок в потоке. */
-
-  /* Useful */
-  clip-path: inset(100%); /* Вырезает контент. Блок в потоке. */
-  clip: rect(1px 1px 1px 1px); /* Старая функция IE6, IE7, вырезает контент. Блок в потоке. */
-  clip: rect(1px, 1px, 1px, 1px); /* Старая функция, вырезает контент. Блок в потоке. */
-
-  overflow: hidden !important; /* Обрезает контент если Блочный контейнер имеет высоту\максвысоту, или white-space: nowrap. */
 
   /* Do not size content to 0 pixels if you want the content to be read by a screen reader.
   * If content styled with font-size:0px or line-height:0, then the elements would still take horizontal space on the screen.
   * All these techniques may result in search engine penalties as they may be interpreted as malicious. */
+  position: absolute !important; /* Small */ /* Вытягивает Блок из потока. Сдвигает все элементы страницы выше на высоту блока. Не влияет на сам контент. */
+  top: auto !important;
+  left: -10000px !important;
+  width: 1px !important; /* Useful */ /* Не влияет на строчный контент, а Блочный - меньше, но в потоке. */
+  height: 1px !important; /* Useful */ /* Не влияет на строчный контент, а Блочный - меньше, но в потоке. */
+  padding: 0 !important; /* small importance */ /* Нет внутренних отступов. Не влияет. */
+  margin: -1px !important; /* small importance */ /* Нет внешних отступов. Не влияет. */
 
-  height: 1px !important; /* Не влияет на строчный контент, а Блочный - меньше, но в потоке. */
-  width: 1px !important; /* Не влияет на строчный контент, а Блочный - меньше, но в потоке. */
+  overflow: hidden !important; /* Useful */ /* Обрезает контент если Блочный контейнер имеет высоту\максвысоту, или white-space: nowrap. */
+  clip-path: inset(100%); /* Useful */ /* Вырезает контент. Блок в потоке. */
+  clip: rect(1px 1px 1px 1px); /* Useful */ /* Старая IE6, IE7, вырезает контент. Блок в потоке. */
+  clip: rect(1px, 1px, 1px, 1px); /* Useful */ /* Старая, вырезает контент. Блок в потоке. */
 
-  font-size: 1px !important; /* Уменьшает текстовый контент, можно выделить с другими элементами. Блок меньше, но в потоке. */
-  line-height: 1px !important; /* Уменьшает текстовый контент, можно выделить с другими элементами. Блок меньше, но в потоке. */
+  font-size: 1px !important; /* Useful */ /* Уменьшает текстовый контент, можно выделить с другими элементами. Блок меньше, но в потоке. */
+  line-height: 1px !important; /* Useful */ /* Уменьшает текстовый контент, можно выделить с другими элементами. Блок меньше, но в потоке. */
+  white-space: nowrap !important; /* small importance */ /* Nowrap - элементы в одной строке не переходят на новую строку. Влияет на overflow. */
 
-  /* only visual effect */
-  opacity: 0 !important; /* Контент прозрачный (не видно, но можно кликать и выделять). Контент и Блок в потоке. */
+  pointer-events: none !important; /* MUST HAVE */ /* Не выделяется мышкой. Контент видно, выделяется табом. Блок в потоке. */
 
-  /* small importance */
-  position: absolute !important; /* Вытягивает Блок из потока. Сдвигает все элементы страницы выше на высоту блока. Не влияет на сам контент. */
-  left: -10000px;
-  top: auto;
-  white-space: nowrap !important; /* Nowrap - элементы в одной строке не переходят на новую строку. Влияет на overflow. */
-  padding: 0 !important; /* Нет внутренних отступов. Не влияет. */
-  border: 0 !important; /* Нет границы. Сжимает внутрь на 1px. Не влияет. */
-  margin: -1px !important; /* Нет внешних отступов. Не влияет. */
-  outline: none !important; /* Нет рамки вокруг. Не влияет. */
-  outline-offset: 0 !important; /* Нет сдвига рамки вокруг. Не влияет. */
+  border: 0 !important; /* small importance */ /* Нет границы. Сжимает внутрь на 1px. Не влияет. */
+  outline: none !important; /* small importance */ /* Нет рамки вокруг. Не влияет. */
+  outline-offset: 0 !important; /* small importance */ /* Нет сдвига рамки вокруг. Не влияет. */
+  opacity: 0 !important; /* only visual effect */ /* Контент прозрачный (не видно, но можно кликать и выделять). Контент и Блок в потоке. */
 }
 
 /* START "СКРЫТЫЕ КЛАССЫ"
 * "Модальное окно скрыто и недоступно для скрин-ридеров до момента нажатия на кнопку-героя"
 */
 .is-hidden {
-  /* MUST HAVE */
-  visibility: hidden !important; /* НЕ ДОСТУПЕН ДЛЯ ЧИТАЛОК. Не выделяется ни мышкой, ни табом. Контент прозрачный. Блок в потоке. */
-  pointer-events: none !important; /* Не выделяется мышкой. Контент видно, выделяется табом. Блок в потоке. */
-
   /* В классе "screen readers only" (.sr-only) Для Читалок удалить visibility: hidden; -> и задать элементу (скрытым заголовкам секций) в тег tabindex="0"
   Тогда контент не выделяется табом.  Контент видно, выделяется мышкой. Блок в потоке. */
-
-  /* Useful */
-  clip-path: inset(100%); /* Вырезает контент. Блок в потоке. */
-  clip: rect(1px 1px 1px 1px); /* Старая функция IE6, IE7, вырезает контент. Блок в потоке. */
-  clip: rect(1px, 1px, 1px, 1px); /* Старая функция, вырезает контент. Блок в потоке. */
-
-  overflow: hidden !important; /* Обрезает контент если Блочный контейнер имеет высоту\максвысоту, или white-space: nowrap. */
 
   /* Do not size content to 0 pixels if you want the content to be read by a screen reader.
   * If content styled with font-size:0px or line-height:0, then the elements would still take horizontal space on the screen.
   * All these techniques may result in search engine penalties as they may be interpreted as malicious. */
+  position: absolute !important; /* Small */ /* Вытягивает Блок из потока. Сдвигает все элементы страницы выше на высоту блока. Не влияет на сам контент. */
+  top: auto !important;
+  left: -10000px !important;
+  width: 1px !important; /* Useful */ /* Не влияет на строчный контент, а Блочный - меньше, но в потоке. */
+  height: 1px !important; /* Useful */ /* Не влияет на строчный контент, а Блочный - меньше, но в потоке. */
+  padding: 0 !important; /* small importance */ /* Нет внутренних отступов. Не влияет. */
+  margin: -1px !important; /* small importance */ /* Нет внешних отступов. Не влияет. */
 
-  height: 1px !important; /* Не влияет на строчный контент, а Блочный - меньше, но в потоке. */
-  width: 1px !important; /* Не влияет на строчный контент, а Блочный - меньше, но в потоке. */
+  overflow: hidden !important; /* Useful */ /* Обрезает контент если Блочный контейнер имеет высоту\максвысоту, или white-space: nowrap. */
+  clip-path: inset(100%); /* Useful */ /* Вырезает контент. Блок в потоке. */
+  clip: rect(1px 1px 1px 1px); /* Useful */ /* Старая IE6, IE7, вырезает контент. Блок в потоке. */
+  clip: rect(1px, 1px, 1px, 1px); /* Useful */ /* Старая, вырезает контент. Блок в потоке. */
 
-  font-size: 1px !important; /* Уменьшает текстовый контент, можно выделить с другими элементами. Блок меньше, но в потоке. */
-  line-height: 1px !important; /* Уменьшает текстовый контент, можно выделить с другими элементами. Блок меньше, но в потоке. */
+  font-size: 1px !important; /* Useful */ /* Уменьшает текстовый контент, можно выделить с другими элементами. Блок меньше, но в потоке. */
+  line-height: 1px !important; /* Useful */ /* Уменьшает текстовый контент, можно выделить с другими элементами. Блок меньше, но в потоке. */
+  white-space: nowrap !important; /* small importance */ /* Nowrap - элементы в одной строке не переходят на новую строку. Влияет на overflow. */
 
-  /* only visual effect */
-  opacity: 0 !important; /* Контент прозрачный (не видно, но можно кликать и выделять). Контент и Блок в потоке. */
+  pointer-events: none !important; /* MUST HAVE */ /* Не выделяется мышкой. Контент видно, выделяется табом. Блок в потоке. */
+  visibility: hidden !important; /* MUST HAVE */ /* НЕ ДОСТУПЕН ДЛЯ ЧИТАЛОК. Не выделяется ни мышкой, ни табом. Контент прозрачный. Блок в потоке. */
 
-  /* small importance */
-  position: absolute !important; /* Вытягивает Блок из потока. Сдвигает все элементы страницы выше на высоту блока. Не влияет на сам контент. */
-  left: -10000px;
-  top: auto;
-  white-space: nowrap !important; /* Nowrap - элементы в одной строке не переходят на новую строку. Влияет на overflow. */
-  padding: 0 !important; /* Нет внутренних отступов. Не влияет. */
-  border: 0 !important; /* Нет границы. Сжимает внутрь на 1px. Не влияет. */
-  margin: -1px !important; /* Нет внешних отступов. Не влияет. */
-  outline: none !important; /* Нет рамки вокруг. Не влияет. */
-  outline-offset: 0 !important; /* Нет сдвига рамки вокруг. Не влияет. */
+  border: 0 !important; /* small importance */ /* Нет границы. Сжимает внутрь на 1px. Не влияет. */
+  outline: none !important; /* small importance */ /* Нет рамки вокруг. Не влияет. */
+  outline-offset: 0 !important; /* small importance */ /* Нет сдвига рамки вокруг. Не влияет. */
+  opacity: 0 !important; /* only visual effect */ /* Контент прозрачный (не видно, но можно кликать и выделять). Контент и Блок в потоке. */
 }
 /* END "СКРЫТЫЕ КЛАССЫ" */
 
@@ -499,65 +490,72 @@ page-header > header-container > header-nav > (logo + nav-menu) ^ +
 /* || ------------------ START "ГЕРОЙ" ------------------ */
 /* ------------------------------------------------------ */
 main > .hero {
+  max-width: 1600px;
   padding-top: 200px;
   padding-bottom: 200px;
+  margin: 0 auto;
+
   background-color: var(--color-bg-hero); /* 2F303A */
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/squooshed/hero-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .hero-container {
-  min-height: 200px;
   flex-flow: column nowrap;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  min-height: 200px;
 }
 
 /* Эффективные решения для вашего бизнеса */
 .hero-title-container {
   flex-flow: row wrap;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+
   width: 696px;
   min-height: 120px;
-  margin-bottom: var(--breakpoint-mr); /* Нижний отступ между Заголовком h1 и Кнопкой-Героем */
+  margin-bottom: var(--uni-margin); /* Нижний отступ между Заголовком h1 и Кнопкой-Героем */
 }
 
 .hero-title-br {
-  padding: 10px 0;
   display: block;
+  padding: 10px 0;
 }
 
 /* Эффективные решения для вашего бизнеса */
 .hero-title-container > .hero-title {
   /* Наследует от body: font-family: Roboto; */
   /* Наследует от браузера: font-style: normal; */
-
+  font-size: clamp(1.2em, 5.6vw, 44px);
   font-weight: 900;
-  font-size: clamp(1.2em, 4.5vw, 44px);
-  line-height: 136%; /* 60px or 136% */
-  text-align: center;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  line-height: 1.36; /* 60px */
   color: var(--color-white);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
 }
 
 /* START Hero-Button */
 
 /* Заказать услугу */
 .hero-container > .hero-btn {
-  white-space: nowrap;
   min-width: 200px;
   min-height: 50px;
-  font-size: 16px;
 
   /* Наследует от body: font-family: Roboto; */
   /* Наследует от браузера: font-style: normal; font-size: 16px; */
+  font-size: 16px;
   font-weight: 700;
-  line-height: 187%; /* identical to box height 30px, or 187% */
+  line-height: 1.87; /* = box height 30px, or 187% */
   letter-spacing: 0.06em;
-  border-radius: 4px;
+  white-space: nowrap;
 
-  /* Тень для Кнопки-героя (статическая) */
-  box-shadow: var(--box-shadow-hero-btn);
+  border-radius: 4px;
+  box-shadow: var(--box-shadow-hero-btn); /* Тень для Кнопки-героя (статическая) */
 }
 
 /* Hero-Button (Hover) */
@@ -585,26 +583,39 @@ main > .features {
 
 .features-list {
   flex-flow: row wrap;
-  justify-content: center;
   align-items: center;
-  margin-top: calc(-1 * var(--breakpoint-mr));
-  margin-left: calc(-1 * var(--breakpoint-mr));
+  justify-content: center;
+
+  margin-top: calc(-1 * var(--uni-margin));
+  margin-left: calc(-1 * var(--uni-margin));
 }
 
 .feature-list-item {
-  flex-basis: calc(100% / var(--flex-features-card-qty) - var(--breakpoint-mr));
-  margin-top: var(--breakpoint-mr);
-  margin-left: var(--breakpoint-mr);
+  flex-basis: calc(100% / var(--cards-per-line-medium) - var(--uni-margin));
+  margin-top: var(--uni-margin);
+  margin-left: var(--uni-margin);
+}
+
+.features-items-wrapper {
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 120px;
+  margin-bottom: 30px;
+
+  background: var(--color-bg-section-grey);
+  border-radius: 4px;
 }
 
 /* Внимание к деталям, Пунктуальность, Планирование, Современные технологии */
 .feature-heading {
-  margin-bottom: var(--margin-bottom-feature-heading);
-  line-height: 16px;
+  margin-bottom: var(--universal--margin-minimum);
+
   font-size: 14px;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
+  line-height: 1.15; /* 16px */
   color: var(--color-text-primary);
+  text-transform: uppercase;
 }
 
 .feature-paragraph {
@@ -616,12 +627,11 @@ main > .features {
 
 /* Идейные соображения, а также начало повседневной работы по формированию позиции. */
 .secondary-text-font {
-  font-size: 14px;
-  line-height: 171%; /* 24 px or 171% */
-  letter-spacing: 0.03em;
-  color: var(--color-text-secondary);
   /* Наследует от body: font-family: Roboto; */
   /* Наследует от браузера: font-style: normal; font-weight: 400; */
+  font-size: 14px;
+  line-height: 1.71; /* 24px */
+  color: var(--color-text-secondary);
 }
 /* ------------------------------------------------------ */
 /* || ---------------- END "ОСОБЕННОСТИ" ---------------- */
@@ -639,16 +649,18 @@ main > .activities {
 
 .activities-list {
   flex-flow: row wrap;
-  justify-content: center;
   align-items: center;
-  margin-top: calc(-1 * var(--breakpoint-mr));
-  margin-left: calc(-1 * var(--breakpoint-mr));
+  justify-content: center;
+
+  margin-top: calc(-1 * var(--uni-margin));
+  margin-left: calc(-1 * var(--uni-margin));
 }
 
 .activity-list-item {
-  flex-basis: calc(100% / var(--flex-activities-card-qty) - var(--breakpoint-mr));
-  margin-top: var(--breakpoint-mr);
-  margin-left: var(--breakpoint-mr);
+  flex-basis: calc(100% / var(--cards-per-line-small) - var(--uni-margin));
+
+  margin-top: var(--uni-margin);
+  margin-left: var(--uni-margin);
 }
 /* .activities-title { } */
 /* ------------------------------------------------------ */
@@ -668,65 +680,142 @@ main > .activities {
 /* team */
 .designers-list {
   flex-flow: row wrap;
-  justify-content: center;
   align-items: center;
-  margin-top: calc(-1 * var(--breakpoint-mr));
-  margin-left: calc(-1 * var(--breakpoint-mr));
+  justify-content: center;
+
+  margin-top: calc(-1 * var(--uni-margin));
+  margin-left: calc(-1 * var(--uni-margin));
 }
 
 /* team card 1-4 or "designer card" */
 .designer-list-item {
-  flex-basis: calc(100% / var(--flex-designer-card-qty) - var(--breakpoint-mr));
-  margin-top: var(--breakpoint-mr);
-  margin-left: var(--breakpoint-mr);
+  flex-basis: calc(100% / var(--cards-per-line-medium) - var(--uni-margin));
+  margin-top: var(--uni-margin);
+  margin-left: var(--uni-margin);
 }
 
 .designer-card {
-  max-width: var(--max-width-designer-card);
-  border-radius: 0 0 4px 4px;
   background-color: var(--color-white); /* card bg */
-
+  border-radius: 0 0 4px 4px;
   /* Тень для Карточки дизайнера (статическая) - material shadow v1 */
   box-shadow: var(--box-shadow-designer-card);
 }
 
 .designer-card-title {
-  padding: var(--breakpoint-mr); /* Паддинги между именем/ролью дизайнера и их контейнером */
+  padding: var(--uni-margin); /* Паддинги между именем/ролью дизайнера и их контейнером */
 }
 
 .designer-name {
   min-height: 19px;
-  margin-bottom: var(--margin-bottom-designers-name);
+  margin-bottom: var(--universal--margin-minimum);
 }
 
 /* Designer-name - Игорь Демьяненко, Ольга Репина, Николай Тарасов, Михаил Ермаков */
 .primary-text-font {
   /* Наследует от body: font-family: Roboto; */
   /* Наследует от браузера: font-style: normal; */
-  font-weight: 500;
   font-size: 16px;
-  line-height: 100%; /* 19px identical to box height */
-
-  text-align: center;
-  letter-spacing: 0.03em;
-
+  font-weight: 500;
+  line-height: 1.19; /* 19px = to box height */
   color: var(--color-text-primary);
+  text-align: center;
 }
 
 /* Product Designer */
 .designer-role {
-  text-align: center;
   min-height: 19px;
+  margin-bottom: 16px;
+
   /* Наследует от body font-family: Roboto; */
   /* Наследует от браузера font-size: 16px; font-style: normal; font-weight: 400; */
-  line-height: 100%; /* identical to box height 19px */
-
-  letter-spacing: 0.03em;
-
+  line-height: 1.19; /* identical to box height 19px */
   color: var(--color-text-secondary); /* Secondary text color #757575 */
+  text-align: center;
 }
+
+.designer-cards-social-list {
+  justify-content: center;
+}
+
+.designer-card-social-item {
+  width: 44px;
+  height: 44px;
+}
+.designer-card-social-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.designer-card-social-link {
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+
+  border-radius: 50%;
+}
+
+.designer-card-social-link:focus,
+.designer-card-social-link:hover {
+  background-color: var(--color-accent);
+}
+
+.designer-contact-icon {
+  fill: var(--color-icon);
+}
+
+.designer-card-social-link:hover .designer-contact-icon,
+.designer-card-social-link:focus .designer-contact-icon {
+  fill: var(--color-white);
+}
+
 /* ------------------------------------------------------ */
 /* || --------------- END "НАША КОМАНДА" ---------------- */
+/* ------------------------------------------------------ */
+
+/* ------------------------------------------------------ */
+/* || ---------------- START "КЛИЕНТЫ" ------------------ */
+/* ------------------------------------------------------ */
+.clients-list {
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: calc(-1 * var(--uni-margin)); /* 30px top left */
+  margin-left: calc(-1 * var(--uni-margin));
+}
+
+.clients-item {
+  flex-basis: var(--flex-basis-client-card); /* 6 cards */
+  height: 92px;
+  margin: var(--flex-margins-top-and-left); /* 30px top left */
+}
+
+.clients-link {
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+
+  border: 1px solid var(--color-icon);
+  border-radius: 4px;
+}
+
+.clients-icon {
+  fill: var(--color-icon);
+}
+
+.clients-link:hover,
+.clients-link:focus {
+  border: 1px solid var(--color-accent);
+}
+
+.clients-link:hover .clients-icon,
+.clients-link:focus .clients-icon {
+  fill: var(--color-accent);
+}
+
+/* ------------------------------------------------------ */
+/* || ----------------- END "КЛИЕНТЫ" ------------------- */
 /* ------------------------------------------------------ */
 
 /* ------------------------------------------------------ */
@@ -746,8 +835,8 @@ main > .activities {
 /* .footer-address-wrapper { } */
 
 .footer-address {
+  margin-top: var(--universal--margin-small);
   font-style: inherit;
-  margin-top: var(--margin-top-footer-address);
 }
 
 /* .footer-address-list { } */
@@ -774,7 +863,18 @@ main > .activities {
 }
 
 .footer-social-container {
-  padding-left: var(--padding-left-footer-social-container);
+  margin-left: 70px;
+}
+
+.footer-social-title {
+  margin-bottom: 20px;
+
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.14;
+
+  color: var(--color-white);
+  text-transform: uppercase;
 }
 
 .footer-social-list {
@@ -785,8 +885,14 @@ main > .activities {
   margin-right: var(--margin-right-footer-social-list-item);
 }
 
-/* .footer-social-link {
-} */
+.footer-social-link {
+  background-color: var(--color-bg-icon-footer);
+}
+
+.footer-social-icon {
+  fill: var(--color-white);
+}
+
 /* ------------------------------------------------------ */
 /* || -------------- END "ПОДВАЛ САЙТА" ----------------- */
 /* ------------------------------------------------------ */
@@ -795,16 +901,18 @@ main > .activities {
 /* || ------- START "ПОРТФОЛИО - ФИЛЬТРЫ-КНОПКИ" -------- */
 /* ------------------------------------------------------ */
 .portfolio-filters {
-  white-space: nowrap;
   flex-flow: row wrap;
-  justify-content: center;
   align-items: center;
-  margin-bottom: var(--margin-bottom-portfolio-filters);
+  justify-content: center;
+
+  margin-bottom: var(--universal--margin-large);
+  white-space: nowrap;
 }
 
 .portfolio-filters-list {
   flex-flow: row wrap;
   justify-content: flex-start;
+
   margin-top: calc(-1 * var(--margin-top-portfolio-filter));
   margin-left: calc(-1 * var(--margin-left-portfolio-filter));
 }
@@ -822,10 +930,9 @@ main > .activities {
 .btn--secondary:hover,
 .btn--secondary:focus,
 .btn--secondary:active {
-  background-color: var(--color-accent); /* Акцент #2196F3 */
   color: var(--color-white);
-  /* Динамическая тень по наведению - shadow-middle */
-  box-shadow: var(--box-shadow-filter-btn);
+  background-color: var(--color-accent); /* Акцент #2196F3 */
+  box-shadow: var(--box-shadow-filter-btn); /* Динамическая тень по наведению - shadow-middle */
 }
 /* END "Фильтры-Кнопки" */
 
@@ -838,11 +945,11 @@ main > .activities {
 /* ------------------------------------------------------ */
 .portfolio-list {
   flex-flow: row wrap;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 
-  margin-top: calc(-1 * var(--breakpoint-mr));
-  margin-left: calc(-1 * var(--breakpoint-mr));
+  margin-top: calc(-1 * var(--uni-margin));
+  margin-left: calc(-1 * var(--uni-margin));
 }
 
 /* project 4 */
@@ -850,6 +957,16 @@ main > .activities {
   flex-basis: var(--flex-basis-portfolio-card);
   margin: var(--flex-margins-top-and-left);
   background-color: var(--color-white);
+}
+
+.portfolio-project-link {
+  display: block;
+}
+
+.portfolio-project-link:focus,
+.portfolio-project-link:hover {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .project-title {
@@ -861,23 +978,23 @@ main > .activities {
 
 /* "Технокряк, Постер New Orlean vs Golden Star, Ресторан Seafood, Проект Prime, Проект Boxes, Inspiration has no Borders, Издание Limited Edition, Проект LAB, Growing Business" */
 .portfolio-project-name {
-  min-height: calc(6px + var(--breakpoint-mr));
+  min-height: calc(6px + var(--uni-margin));
   margin-bottom: 4px;
 
   font-size: 18px;
-  line-height: 200%; /* identical to box height, 36px or 200% */
+  line-height: 2; /* = box height, 36px or 200% */
+  color: var(--color-text-primary);
   letter-spacing: 0.06em;
   white-space: nowrap;
-  color: var(--color-text-primary);
   /* Наследует от body - font-family: Roboto;
    * Наследует от браузера - font-size: 700px; font-weight: 700; font-style: normal; */
 }
 
 /* Тип проекта: Веб-сайт, Дизайн, Приложение, Маркетинг */
 .portfolio-project-type {
-  min-height: var(--breakpoint-mr);
+  min-height: var(--uni-margin);
   font-size: 16px;
-  line-height: 187%;
+  line-height: 1.87; /* 19px */
   color: var(--color-text-secondary);
 }
 
@@ -893,20 +1010,20 @@ main > .activities {
   min-width: 400px; /* Change me ! */
   padding: 40px; /* Change me ! */
   margin: 0 auto; /* Change me ! */
-  border: 1px solid #cccccc; /* Change me ! */
   margin-top: 21px;
+  border: 1px solid #cccccc; /* Change me ! */
 }
 
 .contact-form-message {
-  resize: none;
   padding: 20px; /* Change me ! */
+  resize: none;
 }
 
 .contact-form-message::placeholder {
+  padding: 1px; /* Change me ! */
+  color: var(--color-text-secondary);
   text-transform: uppercase;
   background-color: var(--color-white);
-  color: var(--color-text-secondary);
-  padding: 1px; /* Change me ! */
 }
 
 /* ------------------------------------------------------ */
@@ -921,10 +1038,10 @@ main > .activities {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 100;
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 100;
 
   transition: opacity 250ms rgba(0, 0, 0, 0.21);
   transition-duration: 250ms;
@@ -934,10 +1051,10 @@ main > .activities {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   max-width: 60vw;
   background-color: var(--color-white);
   border-radius: 21px;
+  transform: translate(-50%, -50%);
 }
 
 /* .contact-form-head {
@@ -945,8 +1062,8 @@ main > .activities {
 } */
 
 .contact-form {
-  flex-flow: column nowrap;
   position: absolute;
+  flex-flow: column nowrap;
 }
 
 .modal-form-input {
@@ -957,16 +1074,16 @@ main > .activities {
   justify-content: flex-end;
   min-width: 100%;
   min-height: fit-content;
-  padding-right: 40px;
   padding-top: 10px;
+  padding-right: 40px;
 }
 
 .modal-close-btn {
-  padding-right: 15px;
-  min-height: fit-content;
-  min-width: fit-content;
-  text-align: center;
-  line-height: 100%;
+  /* FIXME */
+  min-width: 30px; /* FIXME */
+  min-height: 30px; /* FIXME */
+  padding-right: 15px; /* FIXME */
+  text-align: center; /* FIXME */
 }
 
 .form-btn-container {
