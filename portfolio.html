@@ -8,7 +8,13 @@
       name="description"
       content="Portfolio - showcases WebStudio's works with filters by projects type. The site is a Training project of the GoIT student participating in FullStack Dev online course"
     />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/modern-normalize/modern-normalize.min.css"
+      rel="stylesheet"
+    />
+
+    <link href="https://fonts.gstatic.com" rel="preconnect" />
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
@@ -16,12 +22,11 @@
 
     <title>Портфолио</title>
 
-    <link rel="stylesheet" href="./css/modern-normalize.min.css" />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link href="./css/styles.css" rel="stylesheet" />
   </head>
 
   <body class="portfolio-body">
-    <!-- Шапка сайта 2021-Jun-13 22:20 PM -->
+    <!-- Шапка сайта 2021-Jun-18 16:04 -->
     <header class="page-header">
       <!-- Пропустить к Основному Контенту для скрин-ридеров -->
       <div class="skip-to-content">
@@ -43,26 +48,40 @@
             </li>
 
             <li class="nav-menu-item">
-              <a class="nav-link links" href="./portfolio.html" hreflang="ru" aria-current="page"
+              <a
+                class="nav-link links accent"
+                href="./portfolio.html"
+                aria-current="page"
+                hreflang="ru"
                 >Портфолио</a
               >
             </li>
 
             <li class="nav-menu-item">
-              <a class="nav-link links" href="#">Контакты</a>
+              <a class="nav-link links" href="#0">Контакты</a>
             </li>
           </ul>
         </nav>
         <div class="header-contacts-container">
           <ul class="header-contacts-list list 💪">
             <li class="header-contact-list-item">
-              <a class="header-contact links" href="mailto:info@devstudio.com"
-                >info@devstudio.com</a
+              <a class="header-contact links" href="mailto:info@devstudio.com">
+                <svg class="header-contact-icon" width="16" height="12">
+                  <use href="./images/svgomg-icomooned/icons.svg#icon-envelope"></use>
+                </svg>
+
+                info@devstudio.com</a
               >
             </li>
 
             <li class="header-contact-list-item">
-              <a class="header-contact links" href="tel:+380961111111">+38 096 111 11 11</a>
+              <a class="header-contact links 💪" href="tel:+380961111111">
+                <svg class="header-contact-icon" width="10" height="16">
+                  <use href="./images/svgomg-icomooned/icons.svg#icon-smartphone"></use>
+                </svg>
+
+                +38 096 111 11 11</a
+              >
             </li>
           </ul>
         </div>
@@ -160,7 +179,7 @@
                   <img
                     class="image"
                     src="./images/squooshed/portfolio/project-3.jpg"
-                    alt=""
+                    alt
                     width="370"
                     height="294"
                   />
@@ -176,7 +195,7 @@
                   <img
                     class="image"
                     src="./images/squooshed/portfolio/project-4.jpg"
-                    alt=""
+                    alt
                     width="370"
                     height="294"
                   />
@@ -192,7 +211,7 @@
                   <img
                     class="image"
                     src="./images/squooshed/portfolio/project-5.jpg"
-                    alt=""
+                    alt
                     width="370"
                     height="294"
                   />
@@ -208,7 +227,7 @@
                   <img
                     class="image"
                     src="./images/squooshed/portfolio/project-6.jpg"
-                    alt=""
+                    alt
                     width="370"
                     height="294"
                   />
@@ -226,7 +245,7 @@
                   <img
                     class="image"
                     src="./images/squooshed/portfolio/project-7.jpg"
-                    alt=""
+                    alt
                     width="370"
                     height="294"
                   />
@@ -244,7 +263,7 @@
                   <img
                     class="image"
                     src="./images/squooshed/portfolio/project-8.jpg"
-                    alt=""
+                    alt
                     width="370"
                     height="294"
                   />
@@ -260,7 +279,7 @@
                   <img
                     class="image"
                     src="./images/squooshed/portfolio/project-9.jpg"
-                    alt=""
+                    alt
                     width="370"
                     height="294"
                   />
@@ -276,13 +295,12 @@
       </section>
     </main>
 
-    <!-- Footer Updated on 2021-Jun-11 01:59 -->
+    <!-- Footer Updated on 2021-Jun-18 16:03 -->
     <footer class="page-footer">
       <div class="footer-container container 💪">
         <div class="footer-address-wrapper">
-          <a class="logo links" href="./" hreflang="ru" lang="en">
-            <span class="webstudio accent">Web</span>
-            <span class="webstudio white">Studio</span>
+          <a class="logo links" href="./" lang="en">
+            <span class="webstudio accent">Web</span><span class="webstudio white">Studio</span>
           </a>
           <address class="footer-address">
             <ul class="footer-address-list list">
@@ -311,42 +329,41 @@
           </address>
         </div>
 
-        <div class="footer-social-container 💪">
-          <ul class="footer-social-list list 💪">
-            <li class="footer-social-list-item">
-              <a
-                class="footer-social-link links secondary-text-font footer-contacts"
-                href=""
-                aria-label="Ссылка на Facebook"
-                >Facebook</a
-              >
+        <div class="footer-social-container">
+          <!-- Footer Social links -->
+          <p class="footer-social-title">Присоединяйтесь</p>
+
+          <ul class="designer-cards-social-list list 💪">
+            <li class="designer-card-social-item">
+              <a class="designer-card-social-link footer-social-link 💪" href="#0">
+                <svg class="designer-contact-icon footer-social-icon" width="20" height="20">
+                  <use href="./images/svgomg-icomooned/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
             </li>
 
-            <li class="footer-social-list-item">
-              <a
-                class="footer-social-link links secondary-text-font footer-contacts"
-                href=""
-                aria-label="Ссылка на Twitter"
-                >Twitter</a
-              >
+            <li class="designer-card-social-item">
+              <a class="designer-card-social-link footer-social-link 💪" href="#0">
+                <svg class="designer-contact-icon footer-social-icon" width="20" height="20">
+                  <use href="./images/svgomg-icomooned/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
             </li>
 
-            <li class="footer-social-list-item">
-              <a
-                class="footer-social-link links secondary-text-font footer-contacts"
-                href=""
-                aria-label="Ссылка на Instagram"
-                >Instagram</a
-              >
+            <li class="designer-card-social-item">
+              <a class="designer-card-social-link footer-social-link 💪" href="#0">
+                <svg class="designer-contact-icon footer-social-icon" width="20" height="20">
+                  <use href="./images/svgomg-icomooned/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
             </li>
 
-            <li class="footer-social-list-item">
-              <a
-                class="footer-social-link links secondary-text-font footer-contacts"
-                href=""
-                aria-label="Ссылка на LinkedIn"
-                >LinkedIn</a
-              >
+            <li class="designer-card-social-item">
+              <a class="designer-card-social-link footer-social-link 💪" href="#0">
+                <svg class="designer-contact-icon footer-social-icon" width="20" height="20">
+                  <use href="./images/svgomg-icomooned/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
             </li>
           </ul>
         </div>

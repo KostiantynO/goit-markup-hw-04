@@ -8,7 +8,13 @@
       name="description"
       content="Studio - showcases WebStudio's index page with features, activities and team. The site is a Training project of the GoIT student participating in FullStack Dev online course"
     />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/modern-normalize/modern-normalize.min.css"
+      rel="stylesheet"
+    />
+
+    <link href="https://fonts.gstatic.com" rel="preconnect" />
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
@@ -16,12 +22,11 @@
 
     <title>Студия</title>
 
-    <link rel="stylesheet" href="./css/modern-normalize.min.css" />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link href="./css/styles.css" rel="stylesheet" />
   </head>
 
   <body class="studio-body">
-    <!-- Шапка сайта 2021-Jun-11 01:59 AM -->
+    <!-- Шапка сайта 2021-Jun-18 16:04 -->
     <header class="page-header">
       <!-- Пропустить к Основному Контенту для скрин-ридеров -->
       <div class="skip-to-content">
@@ -39,7 +44,9 @@
 
           <ul class="nav-menu list 💪">
             <li class="nav-menu-item">
-              <a class="nav-link links" href="./" hreflang="ru" aria-current="page">Студия</a>
+              <a class="nav-link links accent" href="./" aria-current="page" hreflang="ru"
+                >Студия</a
+              >
             </li>
 
             <li class="nav-menu-item">
@@ -47,20 +54,30 @@
             </li>
 
             <li class="nav-menu-item">
-              <a class="nav-link links" href="#">Контакты</a>
+              <a class="nav-link links" href="#0">Контакты</a>
             </li>
           </ul>
         </nav>
         <div class="header-contacts-container">
           <ul class="header-contacts-list list 💪">
             <li class="header-contact-list-item">
-              <a class="header-contact links" href="mailto:info@devstudio.com"
-                >info@devstudio.com</a
+              <a class="header-contact links" href="mailto:info@devstudio.com">
+                <svg class="header-contact-icon" width="16" height="12">
+                  <use href="./images/svgomg-icomooned/icons.svg#icon-envelope"></use>
+                </svg>
+
+                info@devstudio.com</a
               >
             </li>
 
             <li class="header-contact-list-item">
-              <a class="header-contact links" href="tel:+380961111111">+38 096 111 11 11</a>
+              <a class="header-contact links 💪" href="tel:+380961111111">
+                <svg class="header-contact-icon" width="10" height="16">
+                  <use href="./images/svgomg-icomooned/icons.svg#icon-smartphone"></use>
+                </svg>
+
+                +38 096 111 11 11</a
+              >
             </li>
           </ul>
         </div>
@@ -78,7 +95,7 @@
             </h1>
           </div>
 
-          <button class="hero-btn btn btn--primary" type="button" data-modal-open>
+          <button class="hero-btn btn btn--primary" data-modal-open type="button">
             Заказать услугу
           </button>
         </div>
@@ -90,6 +107,12 @@
           <h2 class="sr-only">Особенности</h2>
           <ul class="features-list list 💪">
             <li class="feature-list-item">
+              <div class="features-items-wrapper 💪">
+                <svg class="features-item-icon" width="65" height="70">
+                  <use href="./images/svgomg-icomooned/icons.svg#icon-antenna"></use>
+                </svg>
+              </div>
+
               <h3 class="feature-heading">Внимание к деталям</h3>
               <p class="feature-paragraph secondary-text-font">
                 Идейные соображения, а также начало повседневной работы по формированию позиции.
@@ -97,6 +120,11 @@
             </li>
 
             <li class="feature-list-item">
+              <div class="features-items-wrapper 💪">
+                <svg class="features-item-icon" width="65" height="70">
+                  <use href="./images/svgomg-icomooned/icons.svg#icon-clock"></use>
+                </svg>
+              </div>
               <h3 class="feature-heading">Пунктуальность</h3>
               <p class="feature-paragraph secondary-text-font">
                 Задача организации, в особенности же рамки и место обучения кадров влечет за собой.
@@ -104,6 +132,12 @@
             </li>
 
             <li class="feature-list-item">
+              <div class="features-items-wrapper 💪">
+                <svg class="features-item-icon" width="65" height="70">
+                  <use href="./images/svgomg-icomooned/icons.svg#icon-diagram"></use>
+                </svg>
+              </div>
+
               <h3 class="feature-heading">Планирование</h3>
               <p class="feature-paragraph secondary-text-font">
                 Равным образом консультация с широким активом в значительной степени обуславливает.
@@ -111,6 +145,12 @@
             </li>
 
             <li class="feature-list-item">
+              <div class="features-items-wrapper 💪">
+                <svg class="features-item-icon" width="65" height="70">
+                  <use href="./images/svgomg-icomooned/icons.svg#icon-astronaut"></use>
+                </svg>
+              </div>
+
               <h3 class="feature-heading">Современные технологии</h3>
               <p class="feature-paragraph secondary-text-font">
                 Значимость этих проблем настолько очевидна, что реализация плановых заданий.
@@ -177,6 +217,41 @@
                 <div class="designer-card-title">
                   <h3 class="designer-name primary-text-font">Игорь Демьяненко</h3>
                   <p class="designer-role" lang="en">Product Designer</p>
+
+                  <!-- Social links -->
+                  <ul class="designer-cards-social-list list 💪">
+                    <li class="designer-card-social-item">
+                      <a class="designer-card-social-link 💪" href="#0">
+                        <svg class="designer-contact-icon" width="20" height="20">
+                          <use href="./images/svgomg-icomooned/icons.svg#icon-instagram"></use>
+                        </svg>
+                      </a>
+                    </li>
+
+                    <li class="designer-card-social-item">
+                      <a class="designer-card-social-link 💪" href="#0">
+                        <svg class="designer-contact-icon" width="20" height="20">
+                          <use href="./images/svgomg-icomooned/icons.svg#icon-twitter"></use>
+                        </svg>
+                      </a>
+                    </li>
+
+                    <li class="designer-card-social-item">
+                      <a class="designer-card-social-link 💪" href="#0">
+                        <svg class="designer-contact-icon" width="20" height="20">
+                          <use href="./images/svgomg-icomooned/icons.svg#icon-facebook"></use>
+                        </svg>
+                      </a>
+                    </li>
+
+                    <li class="designer-card-social-item">
+                      <a class="designer-card-social-link 💪" href="#0">
+                        <svg class="designer-contact-icon" width="20" height="20">
+                          <use href="./images/svgomg-icomooned/icons.svg#icon-linkedin"></use>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </li>
@@ -193,6 +268,41 @@
                 <div class="designer-card-title">
                   <h3 class="designer-name primary-text-font">Ольга Репина</h3>
                   <p class="designer-role" lang="en">Frontend Developer</p>
+
+                  <!-- Social links -->
+                  <ul class="designer-cards-social-list list 💪">
+                    <li class="designer-card-social-item">
+                      <a class="designer-card-social-link 💪" href="#0">
+                        <svg class="designer-contact-icon" width="20" height="20">
+                          <use href="./images/svgomg-icomooned/icons.svg#icon-instagram"></use>
+                        </svg>
+                      </a>
+                    </li>
+
+                    <li class="designer-card-social-item">
+                      <a class="designer-card-social-link 💪" href="#0">
+                        <svg class="designer-contact-icon" width="20" height="20">
+                          <use href="./images/svgomg-icomooned/icons.svg#icon-twitter"></use>
+                        </svg>
+                      </a>
+                    </li>
+
+                    <li class="designer-card-social-item">
+                      <a class="designer-card-social-link 💪" href="#0">
+                        <svg class="designer-contact-icon" width="20" height="20">
+                          <use href="./images/svgomg-icomooned/icons.svg#icon-facebook"></use>
+                        </svg>
+                      </a>
+                    </li>
+
+                    <li class="designer-card-social-item">
+                      <a class="designer-card-social-link 💪" href="#0">
+                        <svg class="designer-contact-icon" width="20" height="20">
+                          <use href="./images/svgomg-icomooned/icons.svg#icon-linkedin"></use>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </li>
@@ -209,6 +319,41 @@
                 <div class="designer-card-title">
                   <h3 class="designer-name primary-text-font">Николай Тарасов</h3>
                   <p class="designer-role" lang="en">Marketing</p>
+
+                  <!-- Social links -->
+                  <ul class="designer-cards-social-list list 💪">
+                    <li class="designer-card-social-item">
+                      <a class="designer-card-social-link 💪" href="#0">
+                        <svg class="designer-contact-icon" width="20" height="20">
+                          <use href="./images/svgomg-icomooned/icons.svg#icon-instagram"></use>
+                        </svg>
+                      </a>
+                    </li>
+
+                    <li class="designer-card-social-item">
+                      <a class="designer-card-social-link 💪" href="#0">
+                        <svg class="designer-contact-icon" width="20" height="20">
+                          <use href="./images/svgomg-icomooned/icons.svg#icon-twitter"></use>
+                        </svg>
+                      </a>
+                    </li>
+
+                    <li class="designer-card-social-item">
+                      <a class="designer-card-social-link 💪" href="#0">
+                        <svg class="designer-contact-icon" width="20" height="20">
+                          <use href="./images/svgomg-icomooned/icons.svg#icon-facebook"></use>
+                        </svg>
+                      </a>
+                    </li>
+
+                    <li class="designer-card-social-item">
+                      <a class="designer-card-social-link 💪" href="#0">
+                        <svg class="designer-contact-icon" width="20" height="20">
+                          <use href="./images/svgomg-icomooned/icons.svg#icon-linkedin"></use>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </li>
@@ -225,15 +370,105 @@
                 <div class="designer-card-title">
                   <h3 class="designer-name primary-text-font">Михаил Ермаков</h3>
                   <p class="designer-role" lang="en">UI Designer</p>
+
+                  <!-- Social links -->
+                  <ul class="designer-cards-social-list list 💪">
+                    <li class="designer-card-social-item">
+                      <a class="designer-card-social-link 💪" href="#0">
+                        <svg class="designer-contact-icon" width="20" height="20">
+                          <use href="./images/svgomg-icomooned/icons.svg#icon-instagram"></use>
+                        </svg>
+                      </a>
+                    </li>
+
+                    <li class="designer-card-social-item">
+                      <a class="designer-card-social-link 💪" href="#0">
+                        <svg class="designer-contact-icon" width="20" height="20">
+                          <use href="./images/svgomg-icomooned/icons.svg#icon-twitter"></use>
+                        </svg>
+                      </a>
+                    </li>
+
+                    <li class="designer-card-social-item">
+                      <a class="designer-card-social-link 💪" href="#0">
+                        <svg class="designer-contact-icon" width="20" height="20">
+                          <use href="./images/svgomg-icomooned/icons.svg#icon-facebook"></use>
+                        </svg>
+                      </a>
+                    </li>
+
+                    <li class="designer-card-social-item">
+                      <a class="designer-card-social-link 💪" href="#0">
+                        <svg class="designer-contact-icon" width="20" height="20">
+                          <use href="./images/svgomg-icomooned/icons.svg#icon-linkedin"></use>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </li>
           </ul>
         </div>
       </section>
+
+      <section class="clients section">
+        <div class="container">
+          <h2 class="section-title">Постоянные клиенты</h2>
+          <ul class="clients-list list 💪">
+            <li class="clients-item">
+              <a class="clients-link 💪" href="#0">
+                <svg class="clients-icon" width="41" height="47">
+                  <use href="./images/svgomg-icomooned/icons.svg#icon-client-1"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a class="clients-link 💪" href="#0">
+                <svg class="clients-icon" width="40" height="52">
+                  <use href="./images/svgomg-icomooned/icons.svg#icon-client-2"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a class="clients-link 💪" href="#0">
+                <svg class="clients-icon" width="43" height="41">
+                  <use href="./images/svgomg-icomooned/icons.svg#icon-client-3"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a class="clients-link 💪" href="#0">
+                <svg class="clients-icon" width="84" height="41">
+                  <use href="./images/svgomg-icomooned/icons.svg#icon-client-4"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a class="clients-link 💪" href="#0">
+                <svg class="clients-icon" width="63" height="45">
+                  <use href="./images/svgomg-icomooned/icons.svg#icon-client-5"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a class="clients-link 💪" href="#0">
+                <svg class="clients-icon" width="94" height="44">
+                  <use href="./images/svgomg-icomooned/icons.svg#icon-client-6"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
     </main>
 
-    <!-- Footer Updated on 2021-Jun-11 01:59 -->
+    <!-- Footer Updated on 2021-Jun-18 16:03 -->
     <footer class="page-footer">
       <div class="footer-container container 💪">
         <div class="footer-address-wrapper">
@@ -267,42 +502,41 @@
           </address>
         </div>
 
-        <div class="footer-social-container 💪">
-          <ul class="footer-social-list list 💪">
-            <li class="footer-social-list-item">
-              <a
-                class="footer-social-link links secondary-text-font footer-contacts"
-                href=""
-                aria-label="Ссылка на Facebook"
-                >Facebook</a
-              >
+        <div class="footer-social-container">
+          <!-- Footer Social links -->
+          <p class="footer-social-title">Присоединяйтесь</p>
+
+          <ul class="designer-cards-social-list list 💪">
+            <li class="designer-card-social-item">
+              <a class="designer-card-social-link footer-social-link 💪" href="#0">
+                <svg class="designer-contact-icon footer-social-icon" width="20" height="20">
+                  <use href="./images/svgomg-icomooned/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
             </li>
 
-            <li class="footer-social-list-item">
-              <a
-                class="footer-social-link links secondary-text-font footer-contacts"
-                href=""
-                aria-label="Ссылка на Twitter"
-                >Twitter</a
-              >
+            <li class="designer-card-social-item">
+              <a class="designer-card-social-link footer-social-link 💪" href="#0">
+                <svg class="designer-contact-icon footer-social-icon" width="20" height="20">
+                  <use href="./images/svgomg-icomooned/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
             </li>
 
-            <li class="footer-social-list-item">
-              <a
-                class="footer-social-link links secondary-text-font footer-contacts"
-                href=""
-                aria-label="Ссылка на Instagram"
-                >Instagram</a
-              >
+            <li class="designer-card-social-item">
+              <a class="designer-card-social-link footer-social-link 💪" href="#0">
+                <svg class="designer-contact-icon footer-social-icon" width="20" height="20">
+                  <use href="./images/svgomg-icomooned/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
             </li>
 
-            <li class="footer-social-list-item">
-              <a
-                class="footer-social-link links secondary-text-font footer-contacts"
-                href=""
-                aria-label="Ссылка на LinkedIn"
-                >LinkedIn</a
-              >
+            <li class="designer-card-social-item">
+              <a class="designer-card-social-link footer-social-link 💪" href="#0">
+                <svg class="designer-contact-icon footer-social-icon" width="20" height="20">
+                  <use href="./images/svgomg-icomooned/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
             </li>
           </ul>
         </div>
@@ -310,10 +544,10 @@
     </footer>
 
     <!-- Модальное окно -->
-    <div class="backdrop is-hidden" title="modal-window" data-modal>
+    <div class="backdrop is-hidden" data-modal title="modal-window">
       <div class="modal">
         <div class="modal-close-btn-container 💪">
-          <button class="modal-close-btn btn btn--secondary" type="button" data-modal-close>
+          <button class="modal-close-btn btn btn--secondary" data-modal-close type="button">
             X
           </button>
         </div>
@@ -323,33 +557,80 @@
 
           <input
             class="contact-form-input"
-            placeholder="Your name*"
-            type="text"
-            name="user-name"
             id="input-user-name"
+            name="user-name"
+            type="text"
+            placeholder="Your name*"
             required
             minlength="2"
           />
 
           <input
             class="contact-form-input"
-            placeholder="Your email*"
-            type="email"
-            name="user-email"
             id="input-user-email"
+            name="user-email"
+            type="email"
+            placeholder="Your email*"
             required
           />
 
           <input
             class="contact-form-input"
-            placeholder="Your phone*"
+            id="input-user-phone"
+            name="user-phone"
             type="tel"
+            value="3"
+            title="098-111-11-11"
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+            placeholder="Your phone*"
+            required
+          />
+
+          <!--
+            original
+          <input
+            value="3"
+            title="098-111-11-11"
+                 value="1"
+            value="2"
+
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+            placeholder="Your phone*"
+            required
+            value="111"
             name="user-phone"
             id="input-user-phone"
-            required
-            pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
-            title="098-111-11-11"
+            type="tel"
+            class="contact-form-input"
           />
+
+          values
+          <input
+            class="contact-form-input"
+            id="input-user-phone"
+            name="user-phone"
+            type="tel"
+            title="098-111-11-11"
+            value="3"
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+            placeholder="Your phone*"
+            required
+          />
+
+value+values
+       <input
+            class="contact-form-input"
+            id="input-user-phone"
+            name="user-phone"
+            type="tel"
+            value="3"
+            title="098-111-11-11"
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+            placeholder="Your phone*"
+            required
+          />
+
+           -->
 
           <fieldset>
             <legend>Your age</legend>
@@ -361,7 +642,8 @@
               value="20"
               checked
             />
-            <label for="user-age-20" class="form-input-label">20</label>
+
+            <label class="form-input-label" for="user-age-20">20</label>
 
             <input
               class="contact-form-radio"
@@ -370,7 +652,7 @@
               type="radio"
               value="30"
             />
-            <label for="user-age-30" class="form-input-label">30</label>
+            <label class="form-input-label" for="user-age-30">30</label>
 
             <input
               class="contact-form-radio"
@@ -379,7 +661,7 @@
               type="radio"
               value="40"
             />
-            <label for="user-age-40" class="form-input-label">40</label>
+            <label class="form-input-label" for="user-age-40">40</label>
           </fieldset>
 
           <fieldset>
@@ -416,14 +698,14 @@
 
           <textarea
             class="contact-form-message"
-            name="user-message"
             id="contact-form-message-id"
+            name="user-message"
             placeholder="Your message"
           ></textarea>
 
           <div class="form-select-container">
             <label class="form-select-label"
-              ><select name="user-city" id="contact-form-select">
+              ><select id="contact-form-select" name="user-city">
                 <option value="Kyiv">Kyiv</option>
                 <option value="Kharkov">Kharkov</option>
                 <option value="Odessa" selected>Odessa</option>
@@ -442,3 +724,20 @@
     <script src="./js/modal.js"></script>
   </body>
 </html>
+
+<!--
+  class
+  id, name
+  data-*
+  src, for, type, href, value
+  title, alt
+  role, aria-*
+
+  <a class="..." id="..." data-toggle="modal" href="#0">
+  Example link
+  </a>
+
+  <input class="form-control" type="text">
+
+  <img src="..." alt="...">
+-->
